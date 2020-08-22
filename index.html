@@ -1,0 +1,559 @@
+<?php
+/*
+session_start();
+if(@$_SESSION['Login'] != 'Yes'){
+    header("Location: ../../../membership/index.php");
+    exit();
+}
+if($_POST["login_out"] == 'yes'){
+    unset($_SESSION);
+    header("Location: ../../../membership/index.php");  
+    exit(); 
+}
+*/
+
+    session_start();
+    $counter = intval(file_get_contents("counter.dat"));  
+    if(!$_SESSION['#'])  
+    {  
+		$_SESSION['#'] = true;  
+  		$counter++;  
+	    $fp = fopen("counter.dat","w");  
+	    fwrite($fp, $counter);  
+	    fclose($fp);  	
+//	echo $_SESSION['#']
+//	echo "<br/>";		
+    }  
+	unset($_SESSION);
+	session_destroy();
+	
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Search</title>
+<link rel="stylesheet" type="text/css" href="layui-v2.5.6/layui/css/layui.css">
+<script type="text/javascript" src="layui-v2.5.6/layui/layui.js"></script>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<link href="jquery.highlight-within-textarea.css" rel="stylesheet">
+<script src="jquery.highlight-within-textarea.js"></script>
+<style>
+#header {
+    background-color:#666633;
+    color:#FFFFCC;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:transparent;
+    height:300px;
+    width:600px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+	margin: 0 auto;
+    width:600px;
+    display: table;
+    padding:10px;	
+	font-family: Sans-serif;
+	color: #336699;
+	
+}
+#section table td{
+	word-break: keep-all;white-space:nowrap;
+}
+/*#section table.primer {
+	font-size: 10px;
+	color: yellow;
+
+	}
+*/	
+#section span1{
+	font-size: 15px;
+	color: #666666;
+}	
+#section span2{
+	font-size: 15px;
+	color: black;
+	font-family:"Times New Roman";
+}	
+#section span3{
+	font-size: 18px;
+	color: #CC6600;
+	font-family:"Times New Roman";
+
+}		
+#section input
+{
+	/*background-color:rgba(204,255,204,0.3);*/
+	color: #663333;
+	font-size: 18px;
+	font-family: Arial,Verdana,Sans-serif;
+/*	display: table-cell; */
+	 width: 70px;
+	text-align: center;
+}
+#section input.normal
+{
+/*	background-color:rgba(0,100,0,0.1);
+*/
+	color: #656565;
+	font-size: 14px;
+	border:#D2D2D2 solid 0.5px;
+/*	display: table-cell;
+*/	
+	 width: 80px;
+	text-align: center;
+}	
+#section input.larger {
+	transform: scale(1.2);
+	margin: 0px;
+	width: 12px;
+}	
+#section input.primer {
+
+	width: 200px;
+	margin: 1px 1px;
+	font-size: 12px;
+}
+
+#footer {
+    background-color:rgba(0,100,0,0.1);
+    color:#1E9FFF;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+}	
+
+tr{
+	height: 30px;
+	line-height: 30px;
+}
+.layui-input-block{
+	margin-left: 0px;
+	height: 150px;
+}
+.layui-textarea{
+	height: 100% !important;
+}
+.layui-form-switch{
+	margin-top: 0px
+}
+.layui-form-radio{
+	margin: 0;
+	padding-right: 0px;
+}
+.layui-form-checked[lay-skin=primary] i{
+    border-color:#1E9FFF !important;
+    background-color:#1E9FFF !important;
+}
+.layui-form-radio>i:hover, .layui-form-radioed>i{
+	color: #1E9FFF
+}
+.layui-input, .layui-textarea{
+	display: inline;
+	height:30px;
+	line-height: 30px;
+	border-color: #1E9FFF;
+}
+.primer tr{
+	height: 62px;
+	line-height: 31px;
+}
+.layui-btn{
+	margin-left: 10px;
+}
+.hwt-content mark.red {
+	background-color: #ffc9c9;
+}
+/*.hwt-container{
+	width: 100%
+}*/
+.hwt-content {
+	width: 973px;
+	height: 150px;
+	padding: 20px;
+	border: 1px solid #adb5bd;
+	color: inherit;
+	font: 18px/25px 'Droid Sans Mono', sans-serif;
+}
+</style>
+</head>
+
+<body>
+<div id="header">
+<h1>PlantPegDesigner</h1>
+
+</div>
+
+<!-- <div id="nav">
+
+</div>
+-->
+<div id="section">
+<form action="result.CRISPR.php" method="post" enctype="multipart/form-data" class="layui-form">
+<textarea id="rnaId" placeholder="input DNA sequence ..." name="search" style="border-color: #1E9FFF;color: #495057;">GCAACTGGGATGATATGGAGAAGATCTGGCATCACACCTTCTACAACGAGCTCCGTGTGGCCCCG(G/A)AGGAGCACCCCGTCCTCCTCACCGAGGCTCCTCTCAACCCCAAGGCCAATCGTGAGAAGATGACCCAGATCATGTTTGAGACCTT</textarea>
+	<table border="0">
+		<tr>
+			<td colspan = "2" align = "center">
+				<!-- <div class="layui-input-block">
+			      <textarea placeholder="请输入内容" name="search" class="layui-textarea" style="border-color: #1E9FFF">GCAACTGGGATGATATGGAGAAGATCTGGCATCACACCTTCTACAACGAGCTCCGTGTGGCCCCG(G/A)AGGAGCACCCCGTCCTCCTCACCGAGGCTCCTCTCAACCCCAAGGCCAATCGTGAGAAGATGACCCAGATCATGTTTGAGACCTT</textarea>
+			    </div> -->
+				<!-- <textarea style="border:2px solid #996699" cols="100" rows ="10" name="search" placeholder = "Input DNA sequence ...">
+				</textarea> -->
+			</td>
+		</tr>
+		<tr>
+			<td colspan = "2">
+				<p>Note:<br/><span1>The designed mutations or corrections are marked as "<span style="color:red">(a/b)</span>". "<span style="color:red">a</span>" is the original sequence and "<span style="color:red">b</span>" is the designed mutation sequence, <br/>"<span style="color:red">a</span>" or "<span style="color:red">b</span>" could be null value to represent the deletion "<span style="color:red">(a/)</span>" or insertion "<span style="color:red">(/b)</span>", respectively.</span1></p>
+			</td>
+		</tr>
+		<tr><td colspan = "2">
+			<br/>			
+		<!-- File Upload  -->	
+		<!--	  <form method="POST" action="upload.php" enctype="multipart/form-data">  -->
+				<div>
+				  	<span>Upload a fasta format File: </span>
+				  	<button type="button" class="layui-btn layui-btn-normal" onclick="openFile()" id="test1">
+						<i class="layui-icon">&#xe67c;</i>Browse
+					</button>
+					<span id="filename" style="color: #656565"></span>
+				</div>
+
+				<input type="file" id="selectFile" name="uploadedFile" value="Upload" hidden="true" onchange="getFilename()" />   
+		<!--		</form>   -->
+		<!--  END  -->
+			<br/>	
+			<hr style="border:1px dotted #d9d9d9">
+			
+		</td></tr>			
+		<tr>
+			<td>PAM sequence</td>
+			<td>
+				<input type="radio" class = "larger" name="PAM" checked="checked" value="NGG" /><span style="color:#CC6600">NGG&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<input type="radio" class = "larger" name="PAM" value="NG" /><span style="color:#CC6600">NG&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<input type="radio" class = "larger" name="PAM" value="User_Defined" />&nbsp;<input type="text" name="User_PAM" autocomplete="off" class="layui-input">
+				<!-- <input type="text" name="User_PAM" class="normal"/>		 -->
+			</td>
+		</tr>
+		<tr>
+			<td>Cut distance to PAM</td>
+			<td>
+				<input type="number" name="CutToPAM" autocomplete="off" class="layui-input" value="-3">
+				<!-- <input type="number" class="normal" name="CutToPAM" value="-3"/> -->
+			</td>
+			<!-- <td>
+				<div id="CutToPAM" class="demo-slider"></div>
+			</td> -->
+		</tr>
+		<tr>
+			<td id="sl">Spacer length:&nbsp;20</td>
+			<!-- <td><input type="number" name="OnTargetLength" value='20'/></td> -->
+			<td>
+				<input id="OnTargetLengthInput" type="number" name="OnTargetLength" value='20' hidden="" />
+				<div id="OnTargetLength" class="demo-slider"></div>
+			</td>
+		</tr>
+		<tr>
+			<td id="sgcc">Spacer GC content (%):&nbsp;0-100</td>
+			<!-- <td><input type="number" name="OnTarget_CG_Content_min" value = '0'/> - <input type="number" name="OnTarget_CG_Content_max" value = '100'/></td> -->
+			<td>
+				<div id="OnTarget_CG_Content_min" class="demo-slider"></div>
+				<input type="number" id="OnTarget_CG_Content_min_input" name="OnTarget_CG_Content_min" value = '0' hidden="" />
+				<input type="number" id="OnTarget_CG_Content_max_input" name="OnTarget_CG_Content_max" value = '100' hidden=""/>
+			</td>
+		</tr>
+		<tr>
+			<td id="pew">Prime editing window (the default values are recommended):&nbsp;1-15</td>
+			<!-- <td><input type="number" name="PE_window_min" value = '1'/> - <input type="number" name="PE_window_max" value = '15'/></td> -->
+			<td>
+				<div id="PE_window_min" class="demo-slider"></div>
+				<input id="PE_window_min_input" type="number" name="PE_window_min" value = '1' hidden="" /> 
+				<input id="PE_window_max_input" type="number" name="PE_window_max" value = '15' hidden="" />
+			</td>
+		</tr>
+		<tr>
+			<td id="pbs">PBS length:&nbsp;7-16</td>
+			<!-- <td><input type="number" name="PBS_Length_min" value = '7'/> - <input type="number" name="PBS_Length_max" value = '16'/></td> -->
+			<td>
+				<div id="PBS_Length_min" class="demo-slider"></div>
+				<input id="PBS_Length_min_input" type="number" name="PBS_Length_min" value = '7' hidden="" />  
+				<input id="PBS_Length_max_input" type="number" name="PBS_Length_max" value = '16' hidden="" />
+			</td>
+		</tr>
+		<tr>
+			<td id="pbscg">PBS GC content (%):&nbsp;0-100</td>
+			<!-- <td><input type="number" name="PBS_CG_Content_min" value = '0'/> - <input type="number" name="PBS_CG_Content_max" value = '100'/></td> -->
+			<td>
+				<div id="PBS_CG_Content_min" class="demo-slider"></div>
+				<input id="PBS_CG_Content_min_input" type="number" name="PBS_CG_Content_min" value = '0' hidden="" />  
+				<input id="PBS_CG_Content_max_input" type="number" name="PBS_CG_Content_max" value = '100' hidden="" />
+			</td>
+		</tr>
+		<tr>
+			<td id="tmbest">Recommended Tm of PBS sequence (&#8451;):&nbsp;30</td>
+			<td>
+				<div id="TM_Best" class="demo-slider"></div>
+				<input id="TM_Best_input" type="number" name="TM_Best" value = '30' hidden="" />
+			</td>
+			<!-- <td><input type="number" name="TM_Best" value = '30'/></td> -->
+		</tr>
+		<tr>
+			<td id="rt">Homologous RT template length (the default values are recommended):&nbsp;7-16</td>
+			<!-- <td><input type="number" name="RT_Length_min" value = '7' /> - <input type="number" name="RT_Length_max" value = '16'/></td> -->
+			<td>
+				<div id="RT_Length_min" class="demo-slider"></div>
+				<input type="number" id="RT_Length_min_input" name="RT_Length_min" value = '7' hidden="" /> 
+				<input type="number" id="RT_Length_max_input" name="RT_Length_max" value = '16' hidden="" />
+			</td>
+		</tr>
+<!--	<table border="5"> -->
+		<tr>
+			<td>Tm-directed PBS length model</td>
+			<td>
+				<!-- <input type="checkbox" class="larger" name="Tm_model" checked="checked" value="True" /> -->
+				<input type="checkbox" name="Tm_model" lay-skin="primary" class="" value="True" checked="">
+			</td>
+		</tr>
+		<tr>
+			<td>Exclude first C in RT template&nbsp;&nbsp;&nbsp;</td>
+			<td>
+				<input type="checkbox" name="Exclude_LastG_in_RT" lay-skin="primary" value="True" checked="">
+				<!-- <input type="checkbox"  class="larger" name="Exclude_LastG_in_RT" value="True" checked="checked" /> -->
+			</td>
+		</tr>
+		<tr>
+			<td>Dual-pegRNA model</td>
+			<td>
+				<input type="checkbox" name="CCNNGG_model" lay-skin="primary" value="True" checked="">
+				<!-- <input type="checkbox"  class="larger" name="CCNNGG_model" value="True" checked="checked" /> -->
+			</td>
+		</tr>
+<!-- new added -->	
+		<tr>
+		</tr>
+	</table>
+<br/>	
+	<hr style="border:1px dotted #d9d9d9">Primer design:</hr>
+	<div style="margin-top: 10px;"> 
+
+	<input type="radio" class = "larger" name="Primer" checked="checked" value="OsU3" />
+	pOsU3
+	<input type="radio" class = "larger" name="Primer" value="TaU3" />
+	pTaU3
+	<input type="radio" class = "larger" name="Primer" value="TaU6" />
+	pTaU6
+	<input type="radio" class = "larger" name="Primer" value="pHn-Cas9-V2" />
+	pH-nCas9-PPE-V2
+	</div>
+	<div style="margin-top: 10px">
+		<div style="float: left;">
+			<input type="radio" class = "larger" name="Primer" value="Others" />
+		</div>
+		
+		<div style="float: left;">
+			<span3>Forward primer (5'-3'): </span3>
+			<input type="text" name="Forward_Primer_left" autocomplete="off" class="layui-input">
+			<span2> + Spacer sequence + </span2> 
+			<input type="text" name="Forward_Primer_right" autocomplete="off" class="layui-input">
+			<div style="margin-top: 5px;"></div>
+			<span3>Reverse primer (5'-3'): </span3>
+			<input type="text" name="Reverse_Primer_left" autocomplete="off" class="layui-input">
+			<span2> + PBS and RT template sequence + </span2>
+			<input type="text" name="Reverse_Primer_right" autocomplete="off" class="layui-input">
+		</div>
+	</div>
+	<!-- <table class="primer" border = "1">
+		<tr>
+			<td colspan = "10"></td>
+			<td></td>	
+				
+		</tr>
+		<tr>
+			
+		</tr>		
+		<tr>
+			<td colspan="2">
+				<input type="radio" class = "larger" name="Primer" value="Others" />
+			</td>
+			<td>
+				<span3>Forward primer (5'-3'): </span3>
+				<input type="text" name="Forward_Primer_left" autocomplete="off" class="layui-input">
+				<span2> + ON-TARGET SEQUENCE + </span2> 
+				<input type="text" name="Forward_Primer_right" autocomplete="off" class="layui-input">
+				<br/>
+				<span3>Reverse primer (5'-3'): </span3>
+				<input type="text" name="Reverse_Primer_left" autocomplete="off" class="layui-input">
+				<span2> + PBSRT + </span2>
+				<input type="text" name="Reverse_Primer_right" autocomplete="off" class="layui-input">
+			</td>
+		</tr>		
+	</table>	 -->
+
+	<br/>
+	<div style="clear: both;"></div>
+	<div id="wrapper" style="margin-top: 50px;">
+     <input id="toSubmit" type="submit" style="color:#336699;background-color:rgba(204,204,204,0.2); width: 100px;" value="Submit >>" hidden="true" /> 
+   		<button onclick="goSubmit()" type="button" lay-submit="" class="layui-btn layui-btn-normal">Submit >></button>
+	</div>	
+</form> 
+<br/>
+<p><a href = "/help.pdf">Help document</p>
+<!--<?php print("$output");?> -->
+</div>
+
+<div id="footer">
+There are <?php echo "$counter";?> Visits
+<br/>
+<!--Welcome To 804 Group	
+<form action="./index.CRISPR.php" method="post">
+<input type="hidden" name="login_out" value="yes"/>
+<input type="submit" value="Login OUT"/>
+</form>
+-->
+</div>
+<script>
+	if(window.name!="hasLoad"){    
+           location.reload();    
+           window.name = "hasLoad";    
+     }else{
+           window.name="";    
+     }
+	layui.use('slider', function(){
+		var $ = layui.$
+		slider = layui.slider;
+
+		// slider.render({
+		// 	theme:"#1E9FFF"
+		// })
+		slider.render({
+			elem: '#OnTargetLength',
+			value:20,
+			min:1,
+			max:40,
+			theme:"#1E9FFF",
+			change: function(value){
+		      $('#sl').html('Spacer length:&nbsp;'+ value);
+		      $('#OnTargetLengthInput').val(value)
+		    }
+		});
+		slider.render({
+		    elem: '#OnTarget_CG_Content_min',
+		    range: true ,//范围选择
+		    value: [0, 100],
+		    theme:"#1E9FFF",
+		    change: function(value){
+		      $('#sgcc').html('Spacer GC content(%):&nbsp;'+ value[0] + '-'+ value[1]);
+		      $('#OnTarget_CG_Content_min_input').val(value[0])
+		      $('#OnTarget_CG_Content_max_input').val(value[1])
+		    }
+		     
+	  	});
+	  	slider.render({
+		    elem: '#PE_window_min',
+		    range: true ,//范围选择
+		    min:0,
+		    max:50,
+		    value: [1, 15],
+		    theme:"#1E9FFF",
+		    change: function(value){
+		      $('#pew').html('PE window:(the default values are recommended):&nbsp;'+ value[0] + '-'+ value[1]);
+		      $('#PE_window_min_input').val(value[0])
+		      $('#PE_window_max_input').val(value[1])
+		    }
+	  	});
+	  	slider.render({
+		    elem: '#PBS_Length_min',
+		    range: true ,//范围选择
+		    min:5,
+		    max:30,
+		    value: [7, 16],
+		    theme:"#1E9FFF",
+		    change: function(value){
+		      $('#pbs').html('PBS length:&nbsp;'+ value[0] + '-'+ value[1]);
+		      $('#PBS_Length_min_input').val(value[0])
+		      $('#PBS_Length_max_input').val(value[1])
+		    }
+	  	});
+	  	slider.render({
+		    elem: '#PBS_CG_Content_min',
+		    range: true ,//范围选择
+		   	value: [0, 100],
+		   	theme:"#1E9FFF",
+		   	change: function(value){
+		      $('#pbscg').html('PBS GC content(%):&nbsp;'+ value[0] + '-'+ value[1]);
+		      $('#PBS_CG_Content_min_input').val(value[0]);
+		      $('#PBS_CG_Content_max_input').val(value[1])
+		    }
+	  	});
+	  	slider.render({
+		    elem: '#TM_Best',
+		    min:20,
+		    max:50,
+		    value:30,
+		    theme:"#1E9FFF",
+		    change: function(value){
+		      $('#tmbest').html('Best TM of PBS(&#8451;):&nbsp;'+ value);
+		      $('#TM_Best_input').val(value)
+		    }
+	  	});
+	  	slider.render({
+		    elem: '#RT_Length_min',
+		    range: true ,//范围选择
+		    min:5,
+		    max:20,
+		    value: [7, 16],
+		    theme:"#1E9FFF",
+		    change: function(value){
+		      $('#rt').html('Homologous RT template length (the default values are recommended):&nbsp;'+ value[0] + '-'+ value[1]);
+		      $("#RT_Length_min_input").val(value[0])
+		      $("#RT_Length_max_input").val(value[1])
+		    }
+	  	});
+	})
+	layui.use('form', function(){
+	  var form = layui.form;
+	  
+	  //各种基于事件的操作，下面会有进一步介绍
+	});
+	
+	function openFile(){
+		$("#selectFile").click()
+	}
+	function goSubmit(){
+		$('#toSubmit').click()
+	}
+	function getFilename(){
+		var filename=document.getElementById("selectFile").value;
+		if(filename==undefined||filename==""){
+		  
+		} else{
+		  var fn=filename.substring(filename.lastIndexOf("\\")+1);
+		  // alert(fn)
+		  $('#filename').html(fn+'&nbsp;<i onclick="deleteFile()" class="layui-icon layui-icon-close"></i>')
+		  $('#filename').css('color','#1E9FFF')
+		  // document.getElementById("filename").innerHTML=fn; //将截取后的文件名填充到span中
+		}
+	}
+	$('#rnaId').highlightWithinTextarea({
+	    highlight: '(G/A)',
+	    className:'red'
+	});
+
+	function deleteFile(){
+		$('#selectFile').val('')
+		$('#filename').html('')
+	}
+</script>
+</body>
+</html>
+
+
