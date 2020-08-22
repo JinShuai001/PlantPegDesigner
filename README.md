@@ -38,11 +38,14 @@ PlantPegDesigner provides four types of vector for pegRNA construction, and user
 
 Note 4. Design of pooled pegRNAs 
 
-	PlantPegDesigner permits the design of up to 50 pooled pegRNAs with different input sequences. If more than 50 pegRNAs are needed, please contact us by E-mail. The output of the pooled design is shown in the output page, and all the recommended results can be directly downloaded. Both uppercase and lowercase are accepted. The format of the pooled input file is as below:
+PlantPegDesigner permits the design of up to 50 pooled pegRNAs with different input sequences. If more than 50 pegRNAs are needed, please contact us by E-mail. The output of the pooled design is shown in the output page, and all the recommended results can be directly downloaded. Both uppercase and lowercase are accepted. The format of the pooled input file is as below:
 >Input sequence 1
 CTCGAGACTCCAGGGCCATACTTGTTGGATATCATCGTCCCGCACCAGGAGCATGTGCTGCCTATGATCCCA(A/G)GTGGGGGCGCATTCAAGGACATGATCCTGGATGGTGATGGCAGGACTGTGTA
+
 >Input sequence 2
 CTTCGCCCAGACTCTGCAGCAGTCTCGTGGGTTCGGCACCGAGTTTAGGTTCGCTGACCAGCCAGCGTCTGGC(/AAA)GCCGGCGCCGCCGCTGACCCCTTCGCATCCGCTGCCGCCGCAGCTGACGATGATGATT
+
 ……
+
 >Input sequence 50
 TAGAGCTGTTGCTAATGAAACAGGTGCTTTCTTCTTTCTGATTAATGGC(CCGGAG/AGGCA)ATTATGTCAAAGCTAGCAGGAGAAAGTGAGAGTAATCTCAGGAAGGCATTTGAAGAAGCTGAGAAG
