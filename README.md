@@ -1,5 +1,5 @@
 # PlangPegDesigner
-##PlantPegDesigner: experimentally-based software for designing efficient plant pegRNAs
+## PlantPegDesigner: experimentally-based software for designing efficient plant pegRNAs
  - - - - - - -
 URL:http://www.plantgenomeediting.net
 
