@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color:#F0F0F0;
+	font-family:Tahoma, Geneva, sans-serif;
+	margin:0px;		
+}
+h1{
+	font-size:24px;
+	font-weight:700;
+	color:#666;
+}
+a{
+	color:#009999;
+	text-decoration:none;	
+}
+a:hover{
+	color:#066;	
+}
+
+.container{
+	width:940px;
+	padding:10px;
+	background-color:#FFF;
+	border:1px solid #ccc;
+	margin:20px auto;
+}
+.center{
+	text-align:center;	
+}
