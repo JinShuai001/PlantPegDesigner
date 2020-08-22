@@ -1,6 +1,6 @@
 # PlangPegDesigner
 PlantPegDesigner: experimentally-based software for designing efficient plant pegRNAs
-URL:http://www.plantgenomeediting.net/CRISPR_web/index.CRISPR.html
+URL:http://www.plantgenomeediting.net
 
 PlantPegDesigner is a user-friendly web application based on published design principles and the Tm-directed PBS length and dual-pegRNA data. 
 
