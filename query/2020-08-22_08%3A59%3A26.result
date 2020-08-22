@@ -1,0 +1,1224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Search</title>
+<style>
+#header {
+    background-color:green;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:transparent;
+    height:300px;
+    width:600px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+	margin: 0 auto;
+    width:400px;
+    display: table;
+    padding:10px;	 
+	
+}
+#section input
+{
+	background-color:rgba(0,100,0,0.1);
+	color: blue;
+	font-size: 15px;
+	display: table-cell;
+	 width: 20%;
+	text-align: center;
+}
+#section input.larger {
+        transform: scale(2);
+        margin: 10px;
+      }	
+#footer {
+    background-color:rgba(0,100,0,0.1);
+    color:blue;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style>
+</head>
+
+<body>
+<div id="header">
+<h1>PlantPegDesigner</h1>
+
+</div>
+
+<!-- <div id="nav">
+
+</div>
+-->
+<div id="section">
+<p><span style="color:#c51b8a">There are 3 PAM(s) on the forward strand and 4 PAM(s) on the reverse strand, the dual-pegRNA model could be used!</p>
+<p></p>
+<table frame="hsides" width="1000">
+  <tr>
+    <th colspan="5" align="left"><span style="color:red">No. 1 recommended program,  also could be used for CCN-pegRNA in dual-pegRNA model!</th>
+  </tr>
+  <tr>
+    <th colspan="3" align="left">Reverse Strand</th>
+  </tr>
+  <tr>
+    <th align="left">Spacer-PAM:</th>
+    <td>gaggacggggtgctcctCcg<span style="background-color:#8FBC8F">ggg</td>
+	<td>(75% GC)</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <th align="left"><span style="color:blue">PBS:</th>
+    <td><span style="color:blue">Sequence</td>
+	<td><span style="color:blue">Length</td>
+	<td><span style="color:blue">Tm(&#176C)</td>
+	<td><span style="color:blue">GC(%)</td>
+  </tr>		
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">aggagca</td>
+	<td><span style="color:black">7</td>
+	<td><span style="color:black">22</td>
+	<td><span style="color:black">57.1</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">aggagcac</td>
+	<td><span style="color:black">8</td>
+	<td><span style="color:black">26</td>
+	<td><span style="color:black">62.5</td>
+  </tr>	
+  <tr>
+    <td><span style="color:red">Recommended!</td>
+	<td><span style="color:red">aggagcacc</td>
+	<td><span style="color:red">9</td>
+	<td><span style="color:red">30</td>
+	<td><span style="color:red">66.6</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">aggagcaccc</td>
+	<td><span style="color:black">10</td>
+	<td><span style="color:black">34</td>
+	<td><span style="color:black">70</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">aggagcacccc</td>
+	<td><span style="color:black">11</td>
+	<td><span style="color:black">38</td>
+	<td><span style="color:black">72.7</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">aggagcaccccg</td>
+	<td><span style="color:black">12</td>
+	<td><span style="color:black">42</td>
+	<td><span style="color:black">75</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">aggagcaccccgt</td>
+	<td><span style="color:black">13</td>
+	<td><span style="color:black">44</td>
+	<td><span style="color:black">69.2</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">aggagcaccccgtc</td>
+	<td><span style="color:black">14</td>
+	<td><span style="color:black">48</td>
+	<td><span style="color:black">71.4</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">aggagcaccccgtcc</td>
+	<td><span style="color:black">15</td>
+	<td><span style="color:black">52</td>
+	<td><span style="color:black">73.3</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">aggagcaccccgtcct</td>
+	<td><span style="color:black">16</td>
+	<td><span style="color:black">54</td>
+	<td><span style="color:black">68.7</td>
+  </tr>	
+  <tr>
+    <th align="left"><span style="color:blue">RT template:</th>
+	<td><span style="color:blue">Sequence</td>	
+	<td><span style="color:blue">Length</td>	
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggccccgA</td>
+	<td><span style="color:black">8</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">tggccccgA</td>
+	<td><span style="color:black">9</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gtggccccgA</td>
+	<td><span style="color:black">10</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:red">Recommended!</td>
+	<td><span style="color:red">tgtggccccgA</td>
+	<td><span style="color:red">11</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gtgtggccccgA</td>
+	<td><span style="color:black">12</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">tccgtgtggccccgA</td>
+	<td><span style="color:black">15</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gctccgtgtggccccgA</td>
+	<td><span style="color:black">17</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <th align="left"><span style="color:blue">Primers (Recommended):</th>
+  </tr>
+  <tr>
+    <td colspan="1"><span style="color:#7A09FA">Forward primer (5'-3')</td>
+	<td colspan="4"><span style="color:black">TTGTGCAGATGATCCGTGGCGaggacggggtgctcctCcgGTTTTAGAGCTAGAAATA</td>
+  </tr>
+  <tr>
+	<td colspan="1"><span style="color:#7A09FA">Reverse primer (5'-3')</td>
+	<td colspan="4"><span style="color:black">CTATGACCATGATTACGCCAAGCTTAAAAAAAggtgctcctTcggggccacaGCACCGACTCGGTGCCAC</td>
+  </tr>
+</table>
+<p></p>
+<table frame="hsides" width="1000">
+  <tr>
+    <th colspan="5" align="left"><span style="color:#7A09FA">No. 2 program</th>
+  </tr>
+  <tr>
+    <th colspan="3" align="left">Reverse Strand</th>
+  </tr>
+  <tr>
+    <th align="left">Spacer-PAM:</th>
+    <td>ggaggacggggtgctcctCc<span style="background-color:#8FBC8F">ggg</td>
+	<td>(75% GC)</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <th align="left"><span style="color:blue">PBS:</th>
+    <td><span style="color:blue">Sequence</td>
+	<td><span style="color:blue">Length</td>
+	<td><span style="color:blue">Tm(&#176C)</td>
+	<td><span style="color:blue">GC(%)</td>
+  </tr>		
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagcac</td>
+	<td><span style="color:black">7</td>
+	<td><span style="color:black">24</td>
+	<td><span style="color:black">71.4</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagcacc</td>
+	<td><span style="color:black">8</td>
+	<td><span style="color:black">28</td>
+	<td><span style="color:black">75</td>
+  </tr>	
+  <tr>
+    <td><span style="color:red">Recommended!</td>
+	<td><span style="color:red">ggagcaccc</td>
+	<td><span style="color:red">9</td>
+	<td><span style="color:red">32</td>
+	<td><span style="color:red">77.7</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagcacccc</td>
+	<td><span style="color:black">10</td>
+	<td><span style="color:black">36</td>
+	<td><span style="color:black">80</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagcaccccg</td>
+	<td><span style="color:black">11</td>
+	<td><span style="color:black">40</td>
+	<td><span style="color:black">81.8</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagcaccccgt</td>
+	<td><span style="color:black">12</td>
+	<td><span style="color:black">42</td>
+	<td><span style="color:black">75</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagcaccccgtc</td>
+	<td><span style="color:black">13</td>
+	<td><span style="color:black">46</td>
+	<td><span style="color:black">76.9</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagcaccccgtcc</td>
+	<td><span style="color:black">14</td>
+	<td><span style="color:black">50</td>
+	<td><span style="color:black">78.5</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagcaccccgtcct</td>
+	<td><span style="color:black">15</td>
+	<td><span style="color:black">52</td>
+	<td><span style="color:black">73.3</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagcaccccgtcctc</td>
+	<td><span style="color:black">16</td>
+	<td><span style="color:black">56</td>
+	<td><span style="color:black">75</td>
+  </tr>	
+  <tr>
+    <th align="left"><span style="color:blue">RT template:</th>
+	<td><span style="color:blue">Sequence</td>	
+	<td><span style="color:blue">Length</td>	
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggccccgAa</td>
+	<td><span style="color:black">9</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">tggccccgAa</td>
+	<td><span style="color:black">10</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gtggccccgAa</td>
+	<td><span style="color:black">11</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:red">Recommended!</td>
+	<td><span style="color:red">tgtggccccgAa</td>
+	<td><span style="color:red">12</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gtgtggccccgAa</td>
+	<td><span style="color:black">13</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">tccgtgtggccccgAa</td>
+	<td><span style="color:black">16</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gctccgtgtggccccgAa</td>
+	<td><span style="color:black">18</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <th align="left"><span style="color:blue">Primers (Recommended):</th>
+  </tr>
+  <tr>
+    <td colspan="1"><span style="color:#7A09FA">Forward primer (5'-3')</td>
+	<td colspan="4"><span style="color:black">TTGTGCAGATGATCCGTGGCGgaggacggggtgctcctCcGTTTTAGAGCTAGAAATA</td>
+  </tr>
+  <tr>
+	<td colspan="1"><span style="color:#7A09FA">Reverse primer (5'-3')</td>
+	<td colspan="4"><span style="color:black">CTATGACCATGATTACGCCAAGCTTAAAAAAAgggtgctcctTcggggccacaGCACCGACTCGGTGCCAC</td>
+  </tr>
+</table>
+<p></p>
+<table frame="hsides" width="1000">
+  <tr>
+    <th colspan="5" align="left"><span style="color:red">No. 3 recommended program,  also could be used for NGG-pegRNA in dual-pegRNA model!</th>
+  </tr>
+  <tr>
+    <th colspan="3" align="left">Forward Strand</th>
+  </tr>
+  <tr>
+    <th align="left">Spacer-PAM:</th>
+    <td>cgagctccgtgtggccccgG<span style="background-color:#8FBC8F">agg</td>
+	<td>(80% GC)</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <th align="left"><span style="color:blue">PBS:</th>
+    <td><span style="color:blue">Sequence</td>
+	<td><span style="color:blue">Length</td>
+	<td><span style="color:blue">Tm(&#176C)</td>
+	<td><span style="color:blue">GC(%)</td>
+  </tr>		
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gggccac</td>
+	<td><span style="color:black">7</td>
+	<td><span style="color:black">26</td>
+	<td><span style="color:black">85.7</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gggccaca</td>
+	<td><span style="color:black">8</td>
+	<td><span style="color:black">28</td>
+	<td><span style="color:black">75</td>
+  </tr>	
+  <tr>
+    <td><span style="color:red">Recommended!</td>
+	<td><span style="color:red">gggccacac</td>
+	<td><span style="color:red">9</td>
+	<td><span style="color:red">32</td>
+	<td><span style="color:red">77.7</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gggccacacg</td>
+	<td><span style="color:black">10</td>
+	<td><span style="color:black">36</td>
+	<td><span style="color:black">80</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gggccacacgg</td>
+	<td><span style="color:black">11</td>
+	<td><span style="color:black">40</td>
+	<td><span style="color:black">81.8</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gggccacacgga</td>
+	<td><span style="color:black">12</td>
+	<td><span style="color:black">42</td>
+	<td><span style="color:black">75</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gggccacacggag</td>
+	<td><span style="color:black">13</td>
+	<td><span style="color:black">46</td>
+	<td><span style="color:black">76.9</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gggccacacggagc</td>
+	<td><span style="color:black">14</td>
+	<td><span style="color:black">50</td>
+	<td><span style="color:black">78.5</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gggccacacggagct</td>
+	<td><span style="color:black">15</td>
+	<td><span style="color:black">52</td>
+	<td><span style="color:black">73.3</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gggccacacggagctc</td>
+	<td><span style="color:black">16</td>
+	<td><span style="color:black">56</td>
+	<td><span style="color:black">75</td>
+  </tr>	
+  <tr>
+    <th align="left"><span style="color:blue">RT template:</th>
+	<td><span style="color:blue">Sequence</td>	
+	<td><span style="color:blue">Length</td>	
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">tgctcctTcg</td>
+	<td><span style="color:black">10</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gtgctcctTcg</td>
+	<td><span style="color:black">11</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggtgctcctTcg</td>
+	<td><span style="color:black">12</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gggtgctcctTcg</td>
+	<td><span style="color:black">13</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:red">Recommended!</td>
+	<td><span style="color:red">ggggtgctcctTcg</td>
+	<td><span style="color:red">14</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">acggggtgctcctTcg</td>
+	<td><span style="color:black">16</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gacggggtgctcctTcg</td>
+	<td><span style="color:black">17</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggacggggtgctcctTcg</td>
+	<td><span style="color:black">18</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">aggacggggtgctcctTcg</td>
+	<td><span style="color:black">19</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <th align="left"><span style="color:blue">Primers (Recommended):</th>
+  </tr>
+  <tr>
+    <td colspan="1"><span style="color:#7A09FA">Forward primer (5'-3')</td>
+	<td colspan="4"><span style="color:black">TTGTGCAGATGATCCGTGGCGcgagctccgtgtggccccgGGTTTTAGAGCTAGAAATA</td>
+  </tr>
+  <tr>
+	<td colspan="1"><span style="color:#7A09FA">Reverse primer (5'-3')</td>
+	<td colspan="4"><span style="color:black">CTATGACCATGATTACGCCAAGCTTAAAAAAAgtgtggccccgAaggagcaccccGCACCGACTCGGTGCCAC</td>
+  </tr>
+</table>
+<p></p>
+<table frame="hsides" width="1000">
+  <tr>
+    <th colspan="5" align="left"><span style="color:#7A09FA">No. 4 program</th>
+  </tr>
+  <tr>
+    <th colspan="3" align="left">Reverse Strand</th>
+  </tr>
+  <tr>
+    <th align="left">Spacer-PAM:</th>
+    <td>aggaggacggggtgctcctC<span style="background-color:#8FBC8F">cgg</td>
+	<td>(70% GC)</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <th align="left"><span style="color:blue">PBS:</th>
+    <td><span style="color:blue">Sequence</td>
+	<td><span style="color:blue">Length</td>
+	<td><span style="color:blue">Tm(&#176C)</td>
+	<td><span style="color:blue">GC(%)</td>
+  </tr>		
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gagcacc</td>
+	<td><span style="color:black">7</td>
+	<td><span style="color:black">24</td>
+	<td><span style="color:black">71.4</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gagcaccc</td>
+	<td><span style="color:black">8</td>
+	<td><span style="color:black">28</td>
+	<td><span style="color:black">75</td>
+  </tr>	
+  <tr>
+    <td><span style="color:red">Recommended!</td>
+	<td><span style="color:red">gagcacccc</td>
+	<td><span style="color:red">9</td>
+	<td><span style="color:red">32</td>
+	<td><span style="color:red">77.7</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gagcaccccg</td>
+	<td><span style="color:black">10</td>
+	<td><span style="color:black">36</td>
+	<td><span style="color:black">80</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gagcaccccgt</td>
+	<td><span style="color:black">11</td>
+	<td><span style="color:black">38</td>
+	<td><span style="color:black">72.7</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gagcaccccgtc</td>
+	<td><span style="color:black">12</td>
+	<td><span style="color:black">42</td>
+	<td><span style="color:black">75</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gagcaccccgtcc</td>
+	<td><span style="color:black">13</td>
+	<td><span style="color:black">46</td>
+	<td><span style="color:black">76.9</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gagcaccccgtcct</td>
+	<td><span style="color:black">14</td>
+	<td><span style="color:black">48</td>
+	<td><span style="color:black">71.4</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gagcaccccgtcctc</td>
+	<td><span style="color:black">15</td>
+	<td><span style="color:black">52</td>
+	<td><span style="color:black">73.3</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gagcaccccgtcctcc</td>
+	<td><span style="color:black">16</td>
+	<td><span style="color:black">56</td>
+	<td><span style="color:black">75</td>
+  </tr>	
+  <tr>
+    <th align="left"><span style="color:blue">RT template:</th>
+	<td><span style="color:blue">Sequence</td>	
+	<td><span style="color:blue">Length</td>	
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggccccgAag</td>
+	<td><span style="color:black">10</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">tggccccgAag</td>
+	<td><span style="color:black">11</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gtggccccgAag</td>
+	<td><span style="color:black">12</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:red">Recommended!</td>
+	<td><span style="color:red">tgtggccccgAag</td>
+	<td><span style="color:red">13</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gtgtggccccgAag</td>
+	<td><span style="color:black">14</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">tccgtgtggccccgAag</td>
+	<td><span style="color:black">17</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gctccgtgtggccccgAag</td>
+	<td><span style="color:black">19</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <th align="left"><span style="color:blue">Primers (Recommended):</th>
+  </tr>
+  <tr>
+    <td colspan="1"><span style="color:#7A09FA">Forward primer (5'-3')</td>
+	<td colspan="4"><span style="color:black">TTGTGCAGATGATCCGTGGCGaggaggacggggtgctcctCGTTTTAGAGCTAGAAATA</td>
+  </tr>
+  <tr>
+	<td colspan="1"><span style="color:#7A09FA">Reverse primer (5'-3')</td>
+	<td colspan="4"><span style="color:black">CTATGACCATGATTACGCCAAGCTTAAAAAAAggggtgctcctTcggggccacaGCACCGACTCGGTGCCAC</td>
+  </tr>
+</table>
+<p></p>
+<table frame="hsides" width="1000">
+  <tr>
+    <th colspan="5" align="left"><span style="color:#7A09FA">No. 5 program</th>
+  </tr>
+  <tr>
+    <th colspan="3" align="left">Forward Strand</th>
+  </tr>
+  <tr>
+    <th align="left">Spacer-PAM:</th>
+    <td>caacgagctccgtgtggccc<span style="background-color:#8FBC8F">cgG</td>
+	<td>(70% GC)</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <th align="left"><span style="color:blue">PBS:</th>
+    <td><span style="color:blue">Sequence</td>
+	<td><span style="color:blue">Length</td>
+	<td><span style="color:blue">Tm(&#176C)</td>
+	<td><span style="color:blue">GC(%)</td>
+  </tr>		
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ccacacg</td>
+	<td><span style="color:black">7</td>
+	<td><span style="color:black">24</td>
+	<td><span style="color:black">71.4</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ccacacgg</td>
+	<td><span style="color:black">8</td>
+	<td><span style="color:black">28</td>
+	<td><span style="color:black">75</td>
+  </tr>	
+  <tr>
+    <td><span style="color:red">Recommended!</td>
+	<td><span style="color:red">ccacacgga</td>
+	<td><span style="color:red">9</td>
+	<td><span style="color:red">30</td>
+	<td><span style="color:red">66.6</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ccacacggag</td>
+	<td><span style="color:black">10</td>
+	<td><span style="color:black">34</td>
+	<td><span style="color:black">70</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ccacacggagc</td>
+	<td><span style="color:black">11</td>
+	<td><span style="color:black">38</td>
+	<td><span style="color:black">72.7</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ccacacggagct</td>
+	<td><span style="color:black">12</td>
+	<td><span style="color:black">40</td>
+	<td><span style="color:black">66.6</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ccacacggagctc</td>
+	<td><span style="color:black">13</td>
+	<td><span style="color:black">44</td>
+	<td><span style="color:black">69.2</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ccacacggagctcg</td>
+	<td><span style="color:black">14</td>
+	<td><span style="color:black">48</td>
+	<td><span style="color:black">71.4</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ccacacggagctcgt</td>
+	<td><span style="color:black">15</td>
+	<td><span style="color:black">50</td>
+	<td><span style="color:black">66.6</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ccacacggagctcgtt</td>
+	<td><span style="color:black">16</td>
+	<td><span style="color:black">52</td>
+	<td><span style="color:black">62.5</td>
+  </tr>	
+  <tr>
+    <th align="left"><span style="color:blue">RT template:</th>
+	<td><span style="color:blue">Sequence</td>	
+	<td><span style="color:blue">Length</td>	
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">tgctcctTcgggg</td>
+	<td><span style="color:black">13</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gtgctcctTcgggg</td>
+	<td><span style="color:black">14</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggtgctcctTcgggg</td>
+	<td><span style="color:black">15</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gggtgctcctTcgggg</td>
+	<td><span style="color:black">16</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:red">Recommended!</td>
+	<td><span style="color:red">ggggtgctcctTcgggg</td>
+	<td><span style="color:red">17</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">acggggtgctcctTcgggg</td>
+	<td><span style="color:black">19</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gacggggtgctcctTcgggg</td>
+	<td><span style="color:black">20</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggacggggtgctcctTcgggg</td>
+	<td><span style="color:black">21</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">aggacggggtgctcctTcgggg</td>
+	<td><span style="color:black">22</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <th align="left"><span style="color:blue">Primers (Recommended):</th>
+  </tr>
+  <tr>
+    <td colspan="1"><span style="color:#7A09FA">Forward primer (5'-3')</td>
+	<td colspan="4"><span style="color:black">TTGTGCAGATGATCCGTGGCGcaacgagctccgtgtggcccGTTTTAGAGCTAGAAATA</td>
+  </tr>
+  <tr>
+	<td colspan="1"><span style="color:#7A09FA">Reverse primer (5'-3')</td>
+	<td colspan="4"><span style="color:black">CTATGACCATGATTACGCCAAGCTTAAAAAAAtccgtgtggccccgAaggagcaccccGCACCGACTCGGTGCCAC</td>
+  </tr>
+</table>
+<p></p>
+<table frame="hsides" width="1000">
+  <tr>
+    <th colspan="5" align="left"><span style="color:#7A09FA">No. 6 program</th>
+  </tr>
+  <tr>
+    <th colspan="3" align="left">Forward Strand</th>
+  </tr>
+  <tr>
+    <th align="left">Spacer-PAM:</th>
+    <td>cttctacaacgagctccgtg<span style="background-color:#8FBC8F">tgg</td>
+	<td>(55% GC)</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <th align="left"><span style="color:blue">PBS:</th>
+    <td><span style="color:blue">Sequence</td>
+	<td><span style="color:blue">Length</td>
+	<td><span style="color:blue">Tm(&#176C)</td>
+	<td><span style="color:blue">GC(%)</td>
+  </tr>		
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagctc</td>
+	<td><span style="color:black">7</td>
+	<td><span style="color:black">24</td>
+	<td><span style="color:black">71.4</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagctcg</td>
+	<td><span style="color:black">8</td>
+	<td><span style="color:black">28</td>
+	<td><span style="color:black">75</td>
+  </tr>	
+  <tr>
+    <td><span style="color:red">Recommended!</td>
+	<td><span style="color:red">ggagctcgt</td>
+	<td><span style="color:red">9</td>
+	<td><span style="color:red">30</td>
+	<td><span style="color:red">66.6</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagctcgtt</td>
+	<td><span style="color:black">10</td>
+	<td><span style="color:black">32</td>
+	<td><span style="color:black">60</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagctcgttg</td>
+	<td><span style="color:black">11</td>
+	<td><span style="color:black">36</td>
+	<td><span style="color:black">63.6</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagctcgttgt</td>
+	<td><span style="color:black">12</td>
+	<td><span style="color:black">38</td>
+	<td><span style="color:black">58.3</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagctcgttgta</td>
+	<td><span style="color:black">13</td>
+	<td><span style="color:black">40</td>
+	<td><span style="color:black">53.8</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagctcgttgtag</td>
+	<td><span style="color:black">14</td>
+	<td><span style="color:black">44</td>
+	<td><span style="color:black">57.1</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagctcgttgtaga</td>
+	<td><span style="color:black">15</td>
+	<td><span style="color:black">46</td>
+	<td><span style="color:black">53.3</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggagctcgttgtagaa</td>
+	<td><span style="color:black">16</td>
+	<td><span style="color:black">48</td>
+	<td><span style="color:black">50</td>
+  </tr>	
+  <tr>
+    <th align="left"><span style="color:blue">RT template:</th>
+	<td><span style="color:blue">Sequence</td>	
+	<td><span style="color:blue">Length</td>	
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">tgctcctTcggggccacac</td>
+	<td><span style="color:black">19</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gtgctcctTcggggccacac</td>
+	<td><span style="color:black">20</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggtgctcctTcggggccacac</td>
+	<td><span style="color:black">21</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gggtgctcctTcggggccacac</td>
+	<td><span style="color:black">22</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:red">Recommended!</td>
+	<td><span style="color:red">ggggtgctcctTcggggccacac</td>
+	<td><span style="color:red">23</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">acggggtgctcctTcggggccacac</td>
+	<td><span style="color:black">25</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gacggggtgctcctTcggggccacac</td>
+	<td><span style="color:black">26</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggacggggtgctcctTcggggccacac</td>
+	<td><span style="color:black">27</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">aggacggggtgctcctTcggggccacac</td>
+	<td><span style="color:black">28</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <th align="left"><span style="color:blue">Primers (Recommended):</th>
+  </tr>
+  <tr>
+    <td colspan="1"><span style="color:#7A09FA">Forward primer (5'-3')</td>
+	<td colspan="4"><span style="color:black">TTGTGCAGATGATCCGTGGCGcttctacaacgagctccgtgGTTTTAGAGCTAGAAATA</td>
+  </tr>
+  <tr>
+	<td colspan="1"><span style="color:#7A09FA">Reverse primer (5'-3')</td>
+	<td colspan="4"><span style="color:black">CTATGACCATGATTACGCCAAGCTTAAAAAAAacgagctccgtgtggccccgAaggagcaccccGCACCGACTCGGTGCCAC</td>
+  </tr>
+</table>
+<p></p>
+<table frame="hsides" width="1000">
+  <tr>
+    <th colspan="5" align="left"><span style="color:#7A09FA">No. 7 program</th>
+  </tr>
+  <tr>
+    <th colspan="3" align="left">Reverse Strand</th>
+  </tr>
+  <tr>
+    <th align="left">Spacer-PAM:</th>
+    <td>gagcctcggtgaggaggacg<span style="background-color:#8FBC8F">ggg</td>
+	<td>(70% GC)</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <th align="left"><span style="color:blue">PBS:</th>
+    <td><span style="color:blue">Sequence</td>
+	<td><span style="color:blue">Length</td>
+	<td><span style="color:blue">Tm(&#176C)</td>
+	<td><span style="color:blue">GC(%)</td>
+  </tr>		
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">cctcctc</td>
+	<td><span style="color:black">7</td>
+	<td><span style="color:black">24</td>
+	<td><span style="color:black">71.4</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">cctcctca</td>
+	<td><span style="color:black">8</td>
+	<td><span style="color:black">26</td>
+	<td><span style="color:black">62.5</td>
+  </tr>	
+  <tr>
+    <td><span style="color:red">Recommended!</td>
+	<td><span style="color:red">cctcctcac</td>
+	<td><span style="color:red">9</td>
+	<td><span style="color:red">30</td>
+	<td><span style="color:red">66.6</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">cctcctcacc</td>
+	<td><span style="color:black">10</td>
+	<td><span style="color:black">34</td>
+	<td><span style="color:black">70</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">cctcctcaccg</td>
+	<td><span style="color:black">11</td>
+	<td><span style="color:black">38</td>
+	<td><span style="color:black">72.7</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">cctcctcaccga</td>
+	<td><span style="color:black">12</td>
+	<td><span style="color:black">40</td>
+	<td><span style="color:black">66.6</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">cctcctcaccgag</td>
+	<td><span style="color:black">13</td>
+	<td><span style="color:black">44</td>
+	<td><span style="color:black">69.2</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">cctcctcaccgagg</td>
+	<td><span style="color:black">14</td>
+	<td><span style="color:black">48</td>
+	<td><span style="color:black">71.4</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">cctcctcaccgaggc</td>
+	<td><span style="color:black">15</td>
+	<td><span style="color:black">52</td>
+	<td><span style="color:black">73.3</td>
+  </tr>	
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">cctcctcaccgaggct</td>
+	<td><span style="color:black">16</td>
+	<td><span style="color:black">54</td>
+	<td><span style="color:black">68.7</td>
+  </tr>	
+  <tr>
+    <th align="left"><span style="color:blue">RT template:</th>
+	<td><span style="color:blue">Sequence</td>	
+	<td><span style="color:blue">Length</td>	
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">ggccccgAaggagcaccccgt</td>
+	<td><span style="color:black">21</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">tggccccgAaggagcaccccgt</td>
+	<td><span style="color:black">22</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gtggccccgAaggagcaccccgt</td>
+	<td><span style="color:black">23</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:red">Recommended!</td>
+	<td><span style="color:red">tgtggccccgAaggagcaccccgt</td>
+	<td><span style="color:red">24</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gtgtggccccgAaggagcaccccgt</td>
+	<td><span style="color:black">25</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">tccgtgtggccccgAaggagcaccccgt</td>
+	<td><span style="color:black">28</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><span style="color:black"></td>
+	<td><span style="color:black">gctccgtgtggccccgAaggagcaccccgt</td>
+	<td><span style="color:black">30</td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <th align="left"><span style="color:blue">Primers (Recommended):</th>
+  </tr>
+  <tr>
+    <td colspan="1"><span style="color:#7A09FA">Forward primer (5'-3')</td>
+	<td colspan="4"><span style="color:black">TTGTGCAGATGATCCGTGGCGagcctcggtgaggaggacgGTTTTAGAGCTAGAAATA</td>
+  </tr>
+  <tr>
+	<td colspan="1"><span style="color:#7A09FA">Reverse primer (5'-3')</td>
+	<td colspan="4"><span style="color:black">CTATGACCATGATTACGCCAAGCTTAAAAAAAgtgaggaggacggggtgctcctTcggggccacaGCACCGACTCGGTGCCAC</td>
+  </tr>
+</table>
+</div>
+
+<div id="footer">
+Welcome to our website
+<br/>
+<!--Welcome To 804 Group	
+<form action="./index.CRISPR.php" method="post">
+<input type="hidden" name="login_out" value="yes"/>
+<input type="submit" value="Login OUT"/>
+</form>
+-->
+</div>
+</body>
+</html>
