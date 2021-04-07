@@ -8,7 +8,7 @@ Lin Q1, Jin S1, Zong Y1, Yu H1, Zhu Z, Liu G, Kou L, Wang Y, Qiu JL, Li J*, Gao 
 
 PlantPegDesigner is a user-friendly web application based on published design principles and the Tm-directed PBS length and dual-pegRNA data. 
 
-**Acknowlegement: The free and open source user interface, layui-v2.5.6 (https://www.layui.com/) was used in PlantPegDesigner. Thanks for the technical help of Chunbo Li from Chenbai Ltd.**
+**Acknowlegement: The free and open source user interface, layui-v2.5.6 (https://www.layui.com/) was used in PlantPegDesigner. Thanks for the technical help of Chunbo Li.**
 
 
 
