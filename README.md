@@ -2,12 +2,13 @@
 ## PlantPegDesigner: experimentally-based software for designing efficient plant pegRNAs
  - - - - - - -
 URL:http://www.plantgenomeediting.net
-Please cite as below: 
 
+Please cite as below: 
+Lin Q1, Jin S1, Zong Y1, Yu H1, Zhu Z, Liu G, Kou L, Wang Y, Qiu JL, Li J*, Gao C* (2021) High-efficiency prime editing with optimized, paired pegRNAs in plants. Nature Biotechnology, doi: 10.1038/s41587-021-00868-w.
 
 PlantPegDesigner is a user-friendly web application based on published design principles and the Tm-directed PBS length and dual-pegRNA data. 
 
-Acknowlegement: The free and open source user interface, layui-v2.5.6 (https://www.layui.com/) was used in PlantPegDesigner. Thanks for the technical help of Chunbo Li from Chenbai Co.Ltd.
+**Acknowlegement: The free and open source user interface, layui-v2.5.6 (https://www.layui.com/) was used in PlantPegDesigner. Thanks for the technical help of Chunbo Li from Chenbai Co.Ltd.**
 
 
 
